@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F4727A05220C2C32008F1F37 /* GameSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4727A04220C2C32008F1F37 /* GameSprite.swift */; };
+		F4727A07220C2CED008F1F37 /* Bee.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4727A06220C2CED008F1F37 /* Bee.swift */; };
+		F4727A09220C336E008F1F37 /* Ground.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4727A08220C336E008F1F37 /* Ground.swift */; };
+		F4727A0B220C453F008F1F37 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4727A0A220C453F008F1F37 /* Player.swift */; };
 		F492B453220714890030C4F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492B452220714890030C4F9 /* AppDelegate.swift */; };
 		F492B455220714890030C4F9 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F492B454220714890030C4F9 /* GameScene.sks */; };
 		F492B457220714890030C4F9 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = F492B456220714890030C4F9 /* Actions.sks */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F4727A04220C2C32008F1F37 /* GameSprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSprite.swift; sourceTree = "<group>"; };
+		F4727A06220C2CED008F1F37 /* Bee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bee.swift; sourceTree = "<group>"; };
+		F4727A08220C336E008F1F37 /* Ground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ground.swift; sourceTree = "<group>"; };
+		F4727A0A220C453F008F1F37 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		F492B44F220714890030C4F9 /* Pierre Penguin Escape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pierre Penguin Escape.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F492B452220714890030C4F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F492B454220714890030C4F9 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -69,6 +77,10 @@
 				F492B45F2207148D0030C4F9 /* Assets.xcassets */,
 				F492B4612207148D0030C4F9 /* LaunchScreen.storyboard */,
 				F492B4642207148D0030C4F9 /* Info.plist */,
+				F4727A04220C2C32008F1F37 /* GameSprite.swift */,
+				F4727A06220C2CED008F1F37 /* Bee.swift */,
+				F4727A08220C336E008F1F37 /* Ground.swift */,
+				F4727A0A220C453F008F1F37 /* Player.swift */,
 			);
 			path = "Pierre Penguin Escape";
 			sourceTree = "<group>";
@@ -146,7 +158,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4727A09220C336E008F1F37 /* Ground.swift in Sources */,
+				F4727A07220C2CED008F1F37 /* Bee.swift in Sources */,
+				F4727A05220C2C32008F1F37 /* GameSprite.swift in Sources */,
 				F492B459220714890030C4F9 /* GameScene.swift in Sources */,
+				F4727A0B220C453F008F1F37 /* Player.swift in Sources */,
 				F492B45B220714890030C4F9 /* GameViewController.swift in Sources */,
 				F492B453220714890030C4F9 /* AppDelegate.swift in Sources */,
 			);
@@ -297,6 +313,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 452NG5983H;
 				INFOPLIST_FILE = "Pierre Penguin Escape/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,6 +332,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 452NG5983H;
 				INFOPLIST_FILE = "Pierre Penguin Escape/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
