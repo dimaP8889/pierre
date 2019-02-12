@@ -14,30 +14,46 @@ class Ground: SKSpriteNode, GameSprite {
     var textureAtlas: SKTextureAtlas = SKTextureAtlas(named: "Environment")
     var initialSize: CGSize = CGSize.zero
     
+    var jumpWidth = CGFloat()
+    var jumpCount = CGFloat(1)
+    
     func CreateChildren() {
         
         self.anchorPoint = CGPoint(x: 0, y: 1)
         
         let texture = textureAtlas.textureNamed("ground")
-        var titleCount : CGFloat = 0
-        let titleSize = CGSize(width: 35, height: 300)
+        var tileCount : CGFloat = 0
+        let tileSize = CGSize(width: 35, height: 300)
         
-        while titleCount * titleSize.width < self.size.width {
+        while tileCount * tileSize.width < self.size.width {
             
-            let titleNode = SKSpriteNode(texture: texture)
-            titleNode.size = titleSize
-            titleNode.position.x = titleCount * titleSize.width
+            let tileNode = SKSpriteNode(texture: texture)
+            tileNode.size = tileSize
+            tileNode.position.x = tileCount * tileSize.width
             
-            titleNode.anchorPoint = CGPoint(x: 0, y: 1)
+            tileNode.anchorPoint = CGPoint(x: 0, y: 1)
             
-            self.addChild(titleNode)
-            titleCount += 1
+            self.addChild(tileNode)
+            tileCount += 1
         }
         
         let pointTopLeft = CGPoint(x: 0, y: 0)
         let pointTopRight = CGPoint(x: self.size.width, y: 0)
         
         self.physicsBody = SKPhysicsBody(edgeFrom: pointTopLeft, to: pointTopRight)
+        
+        jumpWidth = tileSize.width * floor(tileCount / 3)
+    }
+    
+    func checkForRepositionn(playerProgress : CGFloat) {
+        
+        let groundJumpPosition = jumpWidth * jumpCount
+        
+        if playerProgress >= groundJumpPosition {
+            
+            self.position.x += jumpWidth
+            jumpCount += 1
+        }
     }
     
     func onTap() {
