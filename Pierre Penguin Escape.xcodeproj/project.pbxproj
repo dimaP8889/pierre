@@ -61,33 +61,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13CEB157221A7DC1005BC513 /* Enemies */ = {
+			isa = PBXGroup;
+			children = (
+				F44BE05422185B200017B37E /* Blade.swift */,
+				F4727A06220C2CED008F1F37 /* Bee.swift */,
+				F44BE0522218573D0017B37E /* Bat.swift */,
+				F44BE050221854E00017B37E /* MadFly.swift */,
+			);
+			path = Enemies;
+			sourceTree = "<group>";
+		};
+		13CEB158221A7DD6005BC513 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				F44BE04B22184E060017B37E /* Star.swift */,
+				F4727A08220C336E008F1F37 /* Ground.swift */,
+				F44BE056221862A10017B37E /* Coin.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		13CEB159221A7DF2005BC513 /* Pierre */ = {
+			isa = PBXGroup;
+			children = (
+				F4727A0A220C453F008F1F37 /* Player.swift */,
+			);
+			path = Pierre;
+			sourceTree = "<group>";
+		};
 		F431B5EA22197B1600206E7A /* Encounters */ = {
 			isa = PBXGroup;
 			children = (
 				F431B5EB22197B8400206E7A /* EncounterA.sks */,
 			);
 			path = Encounters;
-			sourceTree = "<group>";
-		};
-		F44BE04D22184E130017B37E /* Player */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Player;
-			sourceTree = "<group>";
-		};
-		F44BE04E22184E350017B37E /* Enemies */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Enemies;
-			sourceTree = "<group>";
-		};
-		F44BE04F22184E430017B37E /* Environment */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Environment;
 			sourceTree = "<group>";
 		};
 		F492B446220714890030C4F9 = {
@@ -114,21 +122,13 @@
 				F492B454220714890030C4F9 /* GameScene.sks */,
 				F492B452220714890030C4F9 /* AppDelegate.swift */,
 				F431B5EA22197B1600206E7A /* Encounters */,
-				F4727A06220C2CED008F1F37 /* Bee.swift */,
-				F44BE050221854E00017B37E /* MadFly.swift */,
-				F44BE0522218573D0017B37E /* Bat.swift */,
-				F44BE04B22184E060017B37E /* Star.swift */,
-				F4727A08220C336E008F1F37 /* Ground.swift */,
-				F44BE056221862A10017B37E /* Coin.swift */,
-				F44BE05422185B200017B37E /* Blade.swift */,
-				F4727A0A220C453F008F1F37 /* Player.swift */,
+				13CEB157221A7DC1005BC513 /* Enemies */,
+				13CEB158221A7DD6005BC513 /* Environment */,
+				13CEB159221A7DF2005BC513 /* Pierre */,
 				F492B458220714890030C4F9 /* GameScene.swift */,
 				F4727A04220C2C32008F1F37 /* GameSprite.swift */,
 				F492B45A220714890030C4F9 /* GameViewController.swift */,
 				F492B45F2207148D0030C4F9 /* Assets.xcassets */,
-				F44BE04E22184E350017B37E /* Enemies */,
-				F44BE04F22184E430017B37E /* Environment */,
-				F44BE04D22184E130017B37E /* Player */,
 				F492B4612207148D0030C4F9 /* LaunchScreen.storyboard */,
 				F492B45C220714890030C4F9 /* Main.storyboard */,
 			);
