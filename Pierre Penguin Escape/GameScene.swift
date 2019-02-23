@@ -10,6 +10,8 @@ import SpriteKit
 
 class GameScene: SKScene {
     
+    let encounterManager = EncounterManager()
+    
     let cam = SKCameraNode()
     let ground = Ground()
     let player = Player()
@@ -17,6 +19,8 @@ class GameScene: SKScene {
     
     let initialPlayerPosition = CGPoint(x: 150, y: 150)
     var playerProgress = CGFloat()
+    var nextEncounterSpawnPosition = CGFloat(150)
+    let powerUpStar = Star()
     
     
     override func didMove(to view: SKView) {
@@ -34,9 +38,14 @@ class GameScene: SKScene {
         player.position = initialPlayerPosition
         self.addChild(player)
         
+        self.addChild(powerUpStar)
+        powerUpStar.position = CGPoint(x: -2000, y: 2000)
+        
         self.physicsWorld.gravity = CGVector(dx: 0, dy: -5)
         
         screenCenterY = self.size.height / 2
+        
+        encounterManager.addEncountersToScene(gameScene: self)
     }
     
     override func didSimulatePhysics() {
@@ -57,7 +66,28 @@ class GameScene: SKScene {
         self.camera?.position = CGPoint(x: player.position.x, y: cameraYPos)
         
         playerProgress = player.position.x - initialPlayerPosition.x
-        ground.checkForRepositionn(playerProgress: playerProgress)
+        ground.checkForReposition(playerProgress: playerProgress)
+        
+        if player.position.x > nextEncounterSpawnPosition {
+            
+            encounterManager.placeNextEncounter(currentXPos:nextEncounterSpawnPosition)
+            nextEncounterSpawnPosition += 1200
+        }
+        
+        // Each encounter has a 10% chance to spawn a star
+        let starRoll = Int(arc4random_uniform(10))
+        if starRoll == 0 {
+            // Only moves star if it is off the screen
+            if abs(player.position.x - powerUpStar.position.x) > 1200 {
+                
+                // Y Position 50 - 450
+                let randomYPos = 50 + CGFloat(arc4random_uniform(400))
+                powerUpStar.position = CGPoint(x: nextEncounterSpawnPosition, y: randomYPos)
+                // Remove any previous velocity and spin
+                powerUpStar.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
+                powerUpStar.physicsBody?.angularVelocity = 0
+            }
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

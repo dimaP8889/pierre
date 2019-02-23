@@ -53,7 +53,7 @@ class Player : SKSpriteNode, GameSprite {
             self.physicsBody?.applyForce(CGVector(dx: 0, dy: forceToApply))
         }
         
-        self.physicsBody?.velocity.dx = 200
+        self.physicsBody?.velocity.dx = 250
     }
     
     func startFlapping() {

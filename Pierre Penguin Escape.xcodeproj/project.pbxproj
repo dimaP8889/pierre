@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13AB0C3E2221640400EC74E2 /* EncounterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AB0C3D2221640400EC74E2 /* EncounterManager.swift */; };
+		13E59E4822218E1200067487 /* EncounterB.sks in Resources */ = {isa = PBXBuildFile; fileRef = 13E59E4722218E1200067487 /* EncounterB.sks */; };
+		13E59E4A22218FD900067487 /* EncounterC.sks in Resources */ = {isa = PBXBuildFile; fileRef = 13E59E4922218FD900067487 /* EncounterC.sks */; };
 		F431B5EC22197B8400206E7A /* EncounterA.sks in Resources */ = {isa = PBXBuildFile; fileRef = F431B5EB22197B8400206E7A /* EncounterA.sks */; };
 		F44BE04C22184E060017B37E /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44BE04B22184E060017B37E /* Star.swift */; };
 		F44BE051221854E00017B37E /* MadFly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44BE050221854E00017B37E /* MadFly.swift */; };
@@ -28,6 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13AB0C3D2221640400EC74E2 /* EncounterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterManager.swift; sourceTree = "<group>"; };
+		13E59E4722218E1200067487 /* EncounterB.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EncounterB.sks; sourceTree = "<group>"; };
+		13E59E4922218FD900067487 /* EncounterC.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EncounterC.sks; sourceTree = "<group>"; };
 		F431B5EB22197B8400206E7A /* EncounterA.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EncounterA.sks; sourceTree = "<group>"; };
 		F44BE04B22184E060017B37E /* Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
 		F44BE050221854E00017B37E /* MadFly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadFly.swift; sourceTree = "<group>"; };
@@ -93,7 +99,10 @@
 		F431B5EA22197B1600206E7A /* Encounters */ = {
 			isa = PBXGroup;
 			children = (
+				13AB0C3D2221640400EC74E2 /* EncounterManager.swift */,
 				F431B5EB22197B8400206E7A /* EncounterA.sks */,
+				13E59E4722218E1200067487 /* EncounterB.sks */,
+				13E59E4922218FD900067487 /* EncounterC.sks */,
 			);
 			path = Encounters;
 			sourceTree = "<group>";
@@ -193,8 +202,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13E59E4822218E1200067487 /* EncounterB.sks in Resources */,
 				F492B45E220714890030C4F9 /* Main.storyboard in Resources */,
 				F492B455220714890030C4F9 /* GameScene.sks in Resources */,
+				13E59E4A22218FD900067487 /* EncounterC.sks in Resources */,
 				F492B4602207148D0030C4F9 /* Assets.xcassets in Resources */,
 				F431B5EC22197B8400206E7A /* EncounterA.sks in Resources */,
 				F492B4632207148D0030C4F9 /* LaunchScreen.storyboard in Resources */,
@@ -220,6 +231,7 @@
 				F492B453220714890030C4F9 /* AppDelegate.swift in Sources */,
 				F44BE05522185B200017B37E /* Blade.swift in Sources */,
 				F44BE051221854E00017B37E /* MadFly.swift in Sources */,
+				13AB0C3E2221640400EC74E2 /* EncounterManager.swift in Sources */,
 				F44BE04C22184E060017B37E /* Star.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,7 +381,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 452NG5983H;
 				INFOPLIST_FILE = "Pierre Penguin Escape/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -388,7 +400,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 452NG5983H;
 				INFOPLIST_FILE = "Pierre Penguin Escape/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
